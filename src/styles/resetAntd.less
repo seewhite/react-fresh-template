@@ -1,0 +1,55 @@
+/*
+ * @Description: Ant Design 样式重置文件
+ * @Author: hasayake
+ * @Date: 2020-08-26 10:57:49
+ * @LastEditTime: 2020-09-15 18:00:33
+ * @LastEditors: Please set LastEditors
+ */
+
+:global {
+  p {
+    margin: 0;
+  }
+
+  a:hover {
+    color: var(--color-primary);
+  }
+
+  // 重置 h1 - h6
+  @hList: 1, 2, 3, 4, 5, 6;
+
+  each(@hList, {
+    h@{value} {
+      margin-bottom: 0;
+    }
+  })
+
+  // Tree 树形面板
+  .ant-tree .ant-tree-node-content-wrapper {
+    cursor: default;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .ant-btn {
+    border-radius: var(--circle);
+    border-color: var(--color-split-line);
+  }
+
+  .ant-btn[class$=link] {
+    border-color: transparent;
+  }
+
+  .ant-input-group-addon:first-child {
+    border-color: var(--color-split-line);
+    border-top-left-radius: var(--circle);
+    border-bottom-left-radius: var(--circle);
+  }
+
+  .ant-input, .ant-input-password, .ant-input-affix-wrapper {
+    border-radius: var(--circle);
+    border-color: var(--color-split-line);
+  }
+}

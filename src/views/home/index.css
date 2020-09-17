@@ -1,0 +1,12 @@
+.main-wrapper {
+  background-color: #eee;
+}
+
+.main-wrapper-content {
+  width: var(--width-screen-min);
+  min-height: calc(100vh - var(--height-header) - var(--height-footer));
+  margin: 0 auto;
+  padding: 15px 25px;
+  background-color: #fff;
+  overflow-x: auto;
+}

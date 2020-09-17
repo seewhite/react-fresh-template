@@ -1,0 +1,29 @@
+.login-footer {
+  width: 100%;
+  margin-bottom: 18px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  color: var(--color-minor);
+  font-size: var(--size-prompt);
+}
+
+.login-footer > p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.login-footer-nav > ul {
+  display: flex;
+  width: 164px;
+  height: 16px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.login-footer-nav > ul > li:nth-child(2) {
+  padding: 0 24px;
+  border-left: 1px solid var(--color-minor);
+  border-right: 1px solid var(--color-minor);
+}

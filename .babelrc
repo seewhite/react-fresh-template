@@ -1,0 +1,47 @@
+{
+  "presets": [
+    [
+      /*
+      * babel 预设，转译 es6 新的语法
+      */
+      "@babel/preset-env",
+      {
+        /*
+        * @babel-polyfill 已被弃用
+        * 配合 core-js@3 regenerator-runtime 转译新的 api
+        */
+        "targets": {
+          "chrome": "67",
+          "ie": "9"
+        },
+        "useBuiltIns": "usage", // 按需加载
+        "corejs": 3
+      }
+    ],
+    /*
+    * 解析 react jsx 语法
+    */
+    [
+      "@babel/preset-react"
+    ]
+  ],
+  "plugins": [
+    [
+      /*
+      * 将需要转译的新 api 与全局环境隔离
+      * 如使用的 corejs@3 版本则需 install @babel/runtime-corejs3
+      */
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": {
+          "version": 3,
+          "proposals": true
+        }
+      }
+    ],
+    // 支持类字面量写法定义方法
+    [
+      "@babel/plugin-proposal-class-properties", { "loose": true }
+    ]
+  ]
+}

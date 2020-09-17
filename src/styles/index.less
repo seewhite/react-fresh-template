@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  font-size: var(--size-default);
+}
+
+input::-webkit-input-placeholder {
+  font-size: var(--size-default);
+}
+input::-moz-placeholder {
+  font-size: var(--size-default);
+}
+input::-ms-input-placeholder {
+  font-size: var(--size-default);
+}
+
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+@media screen and (max-width: 1200px) {
+  body {
+    width: var(--width-screen-min);
+  }
+}
+
+:root {
+  --circle: 4px;
+
+  --height-header: 60px;
+  --height-footer: 40px;
+
+  --width-screen-min: 1200px;
+
+  --size-prompt: 12px;
+  --size-default: 14px;
+  --size-title: 16px;
+  --size-page: 18px;
+
+  --color-primary: #1983F9;
+  --color-split-line: #EAECF0;
+
+  --color-success: #36C626;
+  --color-warning: #FAAD14;
+  --color-error: #F5222D;
+
+  --color-text: #606266;
+  --color-minor: #909399;
+  --color-important: #303133;
+  --color-prompt: #C0C4CC;
+}
+
+// 全局样式
+:global {
+  #root {
+    height: 100%;
+  }
+
+  .prompt {
+    color: var(--color-prompt);
+  }
+
+  .split-line {
+    color: var(--color-split-line);
+  }
+
+  .minor {
+    color: var(--color-minor);
+  }
+}
